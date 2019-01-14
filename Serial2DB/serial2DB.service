@@ -1,0 +1,29 @@
+[Unit]
+Description=Listen to serial port and put into database
+After=mysql.service
+Requires=mysql.service
+
+[Service]
+User=serial2db
+Group=nogroup
+
+# Prevent writes to /usr, /boot, and /etc
+ProtectSystem=full
+
+# Prevent accessing /home, /root and /run/user
+ProtectHome=true
+
+
+TimeoutStartSec=0
+ExecStartPre=/bin/stty -F /dev/ttyUSB0 speed 57600 cs8 cstopb raw -echo -echoe -echok
+WorkingDirectory=/opt/serial2DB
+ExecStart=/opt/serial2DB/serial2DB.php -v V
+ExecReload=/bin/kill -HUP $MAINPID
+ExecReload=/opt/serialToDbService.php -v V
+KillMode=process
+Restart=always
+RestartSec=42s
+
+
+[Install]
+WantedBy=multi-user.target

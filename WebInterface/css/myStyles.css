@@ -1,0 +1,155 @@
+
+    .foot div,
+    .row div,
+	{ 
+      float: left;
+    }
+	div.value
+	{
+		float:right;
+	}
+	
+	div.template{
+		visibility: hidden;
+	}
+
+	.ui-datepicker-trigger,
+	.dateArrow,
+	.navi a.refresh img,
+	 a.changeOrder img{ 
+	 height:70px;
+	 }
+
+	 
+	 .showDate{
+		 font-size: 30px;
+		 width: 500px:
+	 }
+	 
+	 .dateForth{
+		 transform: scaleX(-1);
+	}
+
+	.ui-datepicker-trigger,
+	.dateArrow{
+				cursor:pointer
+	}
+	
+	a:link {
+    text-decoration: none;
+	}
+
+	a:visited {
+		text-decoration: none;
+	}
+	
+	div.tablecontainer{
+		width:100%
+	}
+	
+	div.navi,
+	div.heading{
+		margin: auto;
+		width: 50%;
+		clear: both;	
+	}
+	
+	.center,
+	div.chart,
+	div.liveData
+	{
+    float:right;
+	//margin: auto;
+    overflow:hidden;
+    padding: 10px;
+	clear: both;	
+   }
+   
+   
+   div.chart{
+	height:360px;
+	width:90%; 
+	//width:90%;
+	//border:1px dotted green;
+	
+	   
+   }
+   
+   
+   div.min,
+   div.avg,
+   div.max,
+   div.unit{
+	   float:left;
+   }
+   
+   
+   .spacer{
+		height:1000px;
+	}
+   
+   
+   .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left-side;
+    margin-top: 30px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.overlay a img{
+	filter: invert(100%);
+	margin-right: 20px;
+	border:none;
+	height:30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+	
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#opener{
+position: fixed;
+top: 20px;
+left: 10px;
+}
